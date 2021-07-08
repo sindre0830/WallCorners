@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase" Name="Corners" Abstract="True">
+    <defName>Corners</defName>
+    <label>Corners</label>
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <costStuffCount>5</costStuffCount>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToBuild>140</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <altitudeLayer>Building</altitudeLayer>
+    <castEdgeShadows>false</castEdgeShadows>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>false</blockLight>
+    <graphicData>
+      <texPath>Things/Building/Linked/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <neverMultiSelect>true</neverMultiSelect>
+    <tickerType>Never</tickerType>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <holdsRoof>true</holdsRoof>
+    <coversFloor>false</coversFloor>
+    <rotatable>false</rotatable>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <designationCategory>Structure</designationCategory>
+    <blockWind>true</blockWind>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+      <isInert>true</isInert>
+      <ai_chillDestination>false</ai_chillDestination>
+      <blueprintGraphicData>
+        <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+  </ThingDef>
+
+  <ThingDef ParentName="Corners" Name="Diagonals" Abstract="False">
+    <defName>diagonal</defName>
+    <label>Diagonals</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>Experimental diagonal corners. Warning: These are PassThrough</description>
+    <costStuffCount>2</costStuffCount>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>70</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <graphicData>
+      <texPath>Things/Diagonals/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+    </graphicData>
+    <uiIconPath>Things/Diagonals/Diagonal Icon</uiIconPath>
+    <fillPercent>0.65</fillPercent>
+    <passability>PassThroughOnly</passability>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Stony</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <building>
+      <blueprintGraphicData>
+        <texPath>Things/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="Corners" Name="Beveled Wall">
+    <defName>beveledwall</defName>
+    <label>Beveled Wall</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>Walls with beveled corners</description>
+    <graphicData>
+      <texPath>Things/Bevel/Wall</texPath>
+      <graphicClass>Graphic_Appearances</graphicClass>
+      <linkType>CornerFiller</linkType>
+    </graphicData>
+    <fillPercent>1</fillPercent>
+    <passability>Impassable</passability>
+    <uiIconPath>Things/Bevel/WallSmooth_MenuIcon</uiIconPath>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Stony</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <building>
+      <blueprintGraphicData>
+        <texPath>Things/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="Corners" Name="Diagonal Wall"  Abstract="False">
+    <defName>diagonalwall</defName>
+    <label>Diagonal Wall</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>Much diagonal, very wall.</description>
+    <costStuffCount>2</costStuffCount>
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>70</WorkToBuild>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <graphicData>
+      <texPath>Things/DiagonalWall/DiagonalWall</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+    </graphicData>
+    <uiIconPath>Things/DiagonalWall/DiagonalWall Icon</uiIconPath>
+    <fillPercent>1</fillPercent>
+    <passability>Impassable</passability>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Stony</li>
+      <li>Metallic</li>
+    </stuffCategories>
+    <building>
+      <blueprintGraphicData>
+        <texPath>Things/Wall_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+    </building>
+  </ThingDef>
+</Defs>

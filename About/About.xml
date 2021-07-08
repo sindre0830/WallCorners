@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModMetaData>
+  <name>Wall Corners</name>
+  <author>RadZerp</author>
+  <supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+		<li>1.2</li>
+	</supportedVersions>
+	<packageId>RadZerp.wallCorners</packageId>
+	<description>
+Vanilla matching wall corners. Made by BirdMan! and continued by RadZerp.
+
+This mod contains 3 wall types:
+Beveled walls wrap seamlessly with vanilla walls and allow for less sharp corners. Stats are identical to vanilla.
+Diagonal walls look like half-blocks, are cheaper and weaker, but otherwise behave like vanilla.
+Diagonals are experimental and allow for things such as "1-tile wide" diagonal corridors. This is accomplished by turning them PassThroughOnly which also means they don't block most things.
+
+All 3 types contain horizontal and vertical pieces that help transitioning from diagonal structures into regular stuff.
+
+Since these walls mostly don't fully occupy a tile, they also allow building floors underneath them.
+	</description>
+</ModMetaData>
